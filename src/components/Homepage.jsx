@@ -55,13 +55,15 @@ const Homepage: FunctionComponent = ({
 
   return (
     <div className="main">
-      <div>
-        <div className="header-text">
-          <p> Featured Books</p>
-        </div>
+      {searchResults.length === 0 && (
+        <div>
+          <div className="header-text">
+            <p> Featured Books</p>
+          </div>
 
-        {searchResults.length === 0 && <Carousel books={books.data} />}
-      </div>
+          <Carousel books={books.data} />
+        </div>
+      )}
 
       <div className="header-text">
         {searchResults.length > 0 ? (
