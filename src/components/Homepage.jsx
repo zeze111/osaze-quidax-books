@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
 import books from "../utils/data.json";
 import Sidebar from "./Sidebar";
 
@@ -14,10 +14,22 @@ const Homepage: FunctionComponent = ({
   sideBar,
   setSideBar,
   setBooksCartQuantity,
+  setSearchResults,
 }) => {
   const [booksCart, setBooksCart] = useState([]);
 
-  const displayBooks = searchResults.length > 0 ? searchResults : books.data;
+  const displayBooks =
+    searchResults.length > 0
+      ? searchResults
+      : searchValue.length > 0
+      ? []
+      : books.data;
+
+  useEffect(() => {
+    if (searchValue.length === 0) {
+      setSearchResults([]);
+    }
+  }, [searchValue, setSearchResults]);
 
   /**
    * This handles adding a book to cart
@@ -55,7 +67,7 @@ const Homepage: FunctionComponent = ({
 
   return (
     <div className="main">
-      {searchResults.length === 0 && (
+      {searchResults.length === 0 && searchValue.length === 0 && (
         <div>
           <div className="header-text">
             <p> Featured Books</p>
@@ -71,6 +83,8 @@ const Homepage: FunctionComponent = ({
             {searchResults.length} results
             <span> found for </span>'{searchValue}'
           </p>
+        ) : searchValue.length > 0 ? (
+          <p> No results found </p>
         ) : (
           <p> All Books</p>
         )}

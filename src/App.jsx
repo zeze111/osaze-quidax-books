@@ -27,6 +27,7 @@ const App: ReactElement = () => {
         setSideBar={setSideBar}
         sideBar={sideBar}
         setBooksCartQuantity={setBooksCartQuantity}
+        setSearchResults={setSearchResults}
       />
     </div>
   );

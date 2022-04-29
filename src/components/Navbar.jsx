@@ -29,10 +29,6 @@ const Navbar: ReactElement = ({
   const handleOnChange = (value) => {
     const results = [];
 
-    if (value.length === 0) {
-      return setSearchResults([]);
-    }
-
     books.data.map((book) => {
       const authors = book.authors.map((author) => author.name.toLowerCase());
       const genres = book.genres.map((genre) => genre.name.toLowerCase());
@@ -60,6 +56,8 @@ const Navbar: ReactElement = ({
     setSearchResults(results);
     return results;
   };
+
+  console.log(searchValue)
 
   return (
     <div className="navbar">
