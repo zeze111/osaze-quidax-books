@@ -1,0 +1,140 @@
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.sidebar {
+  overflow: scroll;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 49, 46, 0.4);
+}
+
+.sidebar-content {
+  width: 35%;
+  float: right;
+  background-color: white;
+}
+
+.sidebar-navbar {
+  height: 75px;
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+}
+
+#back-icon {
+  cursor: pointer;
+  display: inline;
+  float: left;
+  margin: 30px;
+}
+#back-icon svg {
+  margin-right: 10px;
+}
+
+#cart-text {
+  float: right;
+  display: inline;
+  margin: 28px;
+}
+#cart-text svg {
+  margin-left: 10px;
+}
+
+.sidebar-item {
+  display: flex;
+  height: 146px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom: 1px solid #EEEEEE;
+  font-size: 14px;
+}
+
+.book-cart-details {
+  width: 45%;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.book-cart-title {
+  font-weight: 700;
+  margin: 0;
+}
+.book-cart-author {
+  margin-top: 20px;
+  display: inline;
+}
+.remove-action {
+  position: relative;
+  top: 70px;
+  cursor: pointer;
+}
+
+.book-actions {
+  width: 30%;
+  text-align: right;
+}
+.book-cart-price {
+  margin: 10px 0px;
+}
+.quantity {
+  display: contents;
+  float: right;
+  height: 30px;
+}
+.quantity input{
+  width: 20px;
+}
+.quantity button{
+  width: 25px;
+  cursor: pointer;
+}
+
+.book-subtotal {
+  margin-top: 65px;
+  font-weight: 700;
+}
+
+.total-section {
+  margin: 50px 25px 20px;
+  font-size: 12px;
+}
+.total-section p{
+  display: inline;
+}
+#total-text {
+  float: left;
+  margin: 20px 0px 0px;
+}
+
+.cart-subtotal {
+  font-size: 36px;
+  line-height: 41px;
+  float: right;
+  margin: 0;
+}
+
+.checkout-button {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 70px;
+  width: 90%;
+  background: #000000;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+  color: white;
+  font-size: 18px;
+}
+.checkout-button svg{
+  position: relative;
+  right: 80px;
+}
