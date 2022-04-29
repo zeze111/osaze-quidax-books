@@ -72,9 +72,17 @@ const Navbar: ReactElement = ({
           <p> A flimsy book company</p>
         </div>
         <div className="search-container">
-          <form id="form" ref={form}>
+          <form
+            id="form"
+            ref={form}
+            onSubmit={() => {
+              setSearchValue("");
+              setSearchResults([]);
+            }}
+          >
             <input
               type="text"
+              value={searchValue}
               placeholder="Search books, genre, authors, etc."
               onChange={(event) =>
                 handleOnChange(event.target.value.trim().toLowerCase())
