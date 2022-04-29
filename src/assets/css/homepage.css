@@ -24,6 +24,9 @@ margin-left: 40px;
   height: 183px;
   width: 404px;
 }
+.card:hover {
+  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.15);
+}
 
 .card img {
   height: 183px;
